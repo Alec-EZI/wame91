@@ -1,0 +1,468 @@
+<style>
+.whatsapp-tool-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+#country-search {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.whatsapp-button, .whatsapp-business-button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button {
+    background-color: #25D366; /* WhatsApp Color */
+    color: white;
+}
+
+.whatsapp-business-button {
+    background-color: #075E54; /* WhatsApp Business Color */
+    color: white;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* WhatsApp hover color */
+}
+
+.whatsapp-business-button:hover {
+    background-color: #054C44; /* WhatsApp Business hover color */
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .whatsapp-button, .whatsapp-business-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+</style>
+
+
+<div class="whatsapp-tool-container">
+    <form id="whatsapp-form">
+        <div class="form-group">
+            <label for="country-code">Country Code:</label>
+            <select id="country-code">
+                <option value="93">Afghanistan (+93)</option>
+                <option value="355">Albania (+355)</option>
+                <option value="213">Algeria (+213)</option>
+                <option value="1">American Samoa (+1)</option>
+                <option value="376">Andorra (+376)</option>
+                <option value="244">Angola (+244)</option>
+                <option value="1">Anguilla (+1)</option>
+                <option value="1">Antigua and Barbuda (+1)</option>
+                <option value="54">Argentina (+54)</option>
+                <option value="374">Armenia (+374)</option>
+                <option value="297">Aruba (+297)</option>
+                <option value="61">Australia (+61)</option>
+                <option value="43">Austria (+43)</option>
+                <option value="994">Azerbaijan (+994)</option>
+                <option value="1">Bahamas (+1)</option>
+                <option value="973">Bahrain (+973)</option>
+                <option value="880">Bangladesh (+880)</option>
+                <option value="1">Barbados (+1)</option>
+                <option value="375">Belarus (+375)</option>
+                <option value="32">Belgium (+32)</option>
+                <option value="501">Belize (+501)</option>
+                <option value="229">Benin (+229)</option>
+                <option value="1">Bermuda (+1)</option>
+                <option value="975">Bhutan (+975)</option>
+                <option value="591">Bolivia (+591)</option>
+                <option value="387">Bosnia and Herzegovina (+387)</option>
+                <option value="267">Botswana (+267)</option>
+                <option value="55">Brazil (+55)</option>
+                <option value="246">British Indian Ocean Territory (+246)</option>
+                <option value="1">British Virgin Islands (+1)</option>
+                <option value="673">Brunei (+673)</option>
+                <option value="359">Bulgaria (+359)</option>
+                <option value="226">Burkina Faso (+226)</option>
+                <option value="257">Burundi (+257)</option>
+                <option value="855">Cambodia (+855)</option>
+                <option value="237">Cameroon (+237)</option>
+                <option value="1">Canada (+1)</option>
+                <option value="238">Cape Verde (+238)</option>
+                <option value="1">Cayman Islands (+1)</option>
+                <option value="236">Central African Republic (+236)</option>
+                <option value="235">Chad (+235)</option>
+                <option value="56">Chile (+56)</option>
+                <option value="86">China (+86)</option>
+                <option value="57">Colombia (+57)</option>
+                <option value="269">Comoros (+269)</option>
+                <option value="242">Congo (+242)</option>
+                <option value="682">Cook Islands (+682)</option>
+                <option value="506">Costa Rica (+506)</option>
+                <option value="385">Croatia (+385)</option>
+                <option value="53">Cuba (+53)</option>
+                <option value="599">Curacao (+599)</option>
+                <option value="357">Cyprus (+357)</option>
+                <option value="420">Czech Republic (+420)</option>
+                <option value="243">Democratic Republic of the Congo (+243)</option>
+                <option value="45">Denmark (+45)</option>
+                <option value="253">Djibouti (+253)</option>
+                <option value="1">Dominica (+1)</option>
+                <option value="1">Dominican Republic (+1)</option>
+                <option value="670">East Timor (+670)</option>
+                <option value="593">Ecuador (+593)</option>
+                <option value="20">Egypt (+20)</option>
+                <option value="503">El Salvador (+503)</option>
+                <option value="240">Equatorial Guinea (+240)</option>
+                <option value="291">Eritrea (+291)</option>
+                <option value="372">Estonia (+372)</option>
+                <option value="251">Ethiopia (+251)</option>
+                <option value="500">Falkland Islands (+500)</option>
+                <option value="298">Faroe Islands (+298)</option>
+                <option value="679">Fiji (+679)</option>
+                <option value="358">Finland (+358)</option>
+                <option value="33">France (+33)</option>
+                <option value="689">French Polynesia (+689)</option>
+                <option value="241">Gabon (+241)</option>
+                <option value="220">Gambia (+220)</option>
+                <option value="995">Georgia (+995)</option>
+                <option value="49">Germany (+49)</option>
+                <option value="233">Ghana (+233)</option>
+                <option value="350">Gibraltar (+350)</option>
+                <option value="30">Greece (+30)</option>
+                <option value="299">Greenland (+299)</option>
+                <option value="1">Grenada (+1)</option>
+                <option value="1">Guam (+1)</option>
+                <option value="502">Guatemala (+502)</option>
+                <option value="44">Guernsey (+44)</option>
+                <option value="224">Guinea (+224)</option>
+                <option value="245">Guinea-Bissau (+245)</option>
+                <option value="592">Guyana (+592)</option>
+                <option value="509">Haiti (+509)</option>
+                <option value="504">Honduras (+504)</option>
+                <option value="852">Hong Kong (+852)</option>
+                <option value="36">Hungary (+36)</option>
+                <option value="354">Iceland (+354)</option>
+                <option value="91" selected>India (+91)</option>
+                <option value="62">Indonesia (+62)</option>
+                <option value="354">Iceland (+354)</option>
+                <option value="353">Ireland (+353)</option>
+                <option value="972">Israel (+972)</option>
+                <option value="39">Italy (+39)</option>
+                <option value="225">Ivory Coast (+225)</option>
+                <option value="81">Japan (+81)</option>
+                <option value="962">Jordan (+962)</option>
+                <option value="7">Kazakhstan (+7)</option>
+                <option value="254">Kenya (+254)</option>
+                <option value="686">Kiribati (+686)</option>
+                <option value="965">Kuwait (+965)</option>
+                <option value="996">Kyrgyzstan (+996)</option>
+                <option value="856">Laos (+856)</option>
+                <option value="371">Latvia (+371)</option>
+                <option value="961">Lebanon (+961)</option>
+                <option value="266">Lesotho (+266)</option>
+                <option value="231">Liberia (+231)</option>
+                <option value="218">Libya (+218)</option>
+                <option value="423">Liechtenstein (+423)</option>
+                <option value="370">Lithuania (+370)</option>
+                <option value="352">Luxembourg (+352)</option>
+                <option value="389">Macedonia (+389)</option>
+                <option value="261">Madagascar (+261)</option>
+                <option value="265">Malawi (+265)</option>
+                <option value="60">Malaysia (+60)</option>
+                <option value="960">Maldives (+960)</option>
+                <option value="223">Mali (+223)</option>
+                <option value="356">Malta (+356)</option>
+                <option value="692">Marshall Islands (+692)</option>
+                <option value="596">Martinique (+596)</option>
+                <option value="222">Mauritania (+222)</option>
+                <option value="230">Mauritius (+230)</option>
+                <option value="262">Mayotte (+262)</option>
+                <option value="52">Mexico (+52)</option>
+                <option value="691">Micronesia (+691)</option>
+                <option value="373">Moldova (+373)</option>
+                <option value="377">Monaco (+377)</option>
+                <option value="976">Mongolia (+976)</option>
+                <option value="382">Montenegro (+382)</option>
+                <option value="1664">Montserrat (+1664)</option>
+                <option value="212">Morocco (+212)</option>
+                <option value="258">Mozambique (+258)</option>
+                <option value="95">Myanmar (+95)</option>
+                <option value="264">Namibia (+264)</option>
+                <option value="674">Nauru (+674)</option>
+                <option value="977">Nepal (+977)</option>
+                <option value="31">Netherlands (+31)</option>
+                <option value="687">New Caledonia (+687)</option>
+                <option value="64">New Zealand (+64)</option>
+                <option value="505">Nicaragua (+505)</option>
+                <option value="227">Niger (+227)</option>
+                <option value="234">Nigeria (+234)</option>
+                <option value="683">Niue (+683)</option>
+                <option value="672">Norfolk Island (+672)</option>
+                <option value="670">Northern Mariana Islands (+670)</option>
+                <option value="47">Norway (+47)</option>
+                <option value="968">Oman (+968)</option>
+                <option value="92">Pakistan (+92)</option>
+                <option value="680">Palau (+680)</option>
+                <option value="970">Palestinian Territories (+970)</option>
+                <option value="507">Panama (+507)</option>
+                <option value="675">Papua New Guinea (+675)</option>
+                <option value="595">Paraguay (+595)</option>
+                <option value="51">Peru (+51)</option>
+                <option value="63">Philippines (+63)</option>
+                <option value="48">Poland (+48)</option>
+                <option value="351">Portugal (+351)</option>
+                <option value="1787">Puerto Rico (+1787)</option>
+                <option value="974">Qatar (+974)</option>
+                <option value="262">Reunion (+262)</option>
+                <option value="40">Romania (+40)</option>
+                <option value="7">Russia (+7)</option>
+                <option value="250">Rwanda (+250)</option>
+                <option value="590">Saint Barthelemy (+590)</option>
+                <option value="1784">Saint Vincent and the Grenadines (+1784)</option>
+                <option value="685">Samoa (+685)</option>
+                <option value="378">San Marino (+378)</option>
+                <option value="239">Sao Tome and Principe (+239)</option>
+                <option value="966">Saudi Arabia (+966)</option>
+                <option value="221">Senegal (+221)</option>
+                <option value="381">Serbia (+381)</option>
+                <option value="248">Seychelles (+248)</option>
+                <option value="232">Sierra Leone (+232)</option>
+                <option value="65">Singapore (+65)</option>
+                <option value="421">Slovakia (+421)</option>
+                <option value="386">Slovenia (+386)</option>
+                <option value="677">Solomon Islands (+677)</option>
+                <option value="252">Somalia (+252)</option>
+                <option value="27">South Africa (+27)</option>
+                <option value="82">South Korea (+82)</option>
+                <option value="211">South Sudan (+211)</option>
+                <option value="34">Spain (+34)</option>
+                <option value="94">Sri Lanka (+94)</option>
+                <option value="249">Sudan (+249)</option>
+                <option value="597">Suriname (+597)</option>
+                <option value="268">Eswatini (+268)</option>
+                <option value="46">Sweden (+46)</option>
+                <option value="41">Switzerland (+41)</option>
+                <option value="961">Syria (+961)</option>
+                <option value="886">Taiwan (+886)</option>
+                <option value="992">Tajikistan (+992)</option>
+                <option value="255">Tanzania (+255)</option>
+                <option value="66">Thailand (+66)</option>
+                <option value="670">Timor-Leste (+670)</option>
+                <option value="228">Togo (+228)</option>
+                <option value="676">Tonga (+676)</option>
+                <option value="1868">Trinidad and Tobago (+1868)</option>
+                <option value="216">Tunisia (+216)</option>
+                <option value="90">Turkey (+90)</option>
+                <option value="993">Turkmenistan (+993)</option>
+                <option value="1649">Turks and Caicos Islands (+1649)</option>
+                <option value="688">Tuvalu (+688)</option>
+                <option value="256">Uganda (+256)</option>
+                <option value="380">Ukraine (+380)</option>
+                <option value="971">United Arab Emirates (+971)</option>
+                <option value="44">United Kingdom (+44)</option>
+                <option value="1">United States (+1)</option>
+                <option value="598">Uruguay (+598)</option>
+                <option value="998">Uzbekistan (+998)</option>
+                <option value="678">Vanuatu (+678)</option>
+                <option value="39">Vatican City (+39)</option>
+                <option value="58">Venezuela (+58)</option>
+                <option value="84">Vietnam (+84)</option>
+                <option value="681">Wallis and Futuna (+681)</option>
+                <option value="967">Yemen (+967)</option>
+                <option value="260">Zambia (+260)</option>
+                <option value="263">Zimbabwe (+263)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" required placeholder="Enter mobile number">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Type your message here">Hello! , How are you?</textarea>
+        </div>
+        
+        <style>
+    .button-group {
+        display: flex;
+        gap: 10px;
+    }
+
+    .whatsapp-button, .whatsapp-business-button {
+        flex: 1;
+        padding: 12px 20px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: box-shadow 0.3s ease-in-out, background-color 0.3s;
+        color: white !important;
+        background: #f0f8ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-button {
+        background-color: #25D366;
+    }
+
+    .whatsapp-business-button {
+        background-color: #075E54;
+    }
+
+    .whatsapp-button:hover {
+        animation: whatsapp-border-animation 1s infinite; /* Glowing effect */
+        box-shadow: 0 0 20px #25D366, 0 0 30px #25D366; /* Glowing effect */
+    }
+
+    .whatsapp-business-button:hover {
+        animation: business-border-animation 1s infinite; /* Glowing effect */
+        box-shadow: 0 0 20px #075E54, 0 0 30px #075E54; /* Glowing effect */
+    }
+
+    @keyframes whatsapp-border-animation {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #25d366;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }
+
+    @keyframes business-border-animation {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #075E54;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .button-group {
+            flex-direction: column;
+        }
+        
+        .whatsapp-button, .whatsapp-business-button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<div class="button-group">
+    <button type="button" onclick="sendWhatsApp('regular')" class="whatsapp-button">Send via WhatsApp</button>
+    <button type="button" onclick="sendWhatsApp('business')" class="whatsapp-business-button">Send via WhatsApp Business</button>
+</div>
+
+    </form>
+</div>
+<article style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333;">
+    <h1 style="color: #0073aa; text-align: center;">Introducing Wa Me 91: A Revolutionary WhatsApp Web Tool for Effortless Chatting</h1>
+
+    <p>In today’s fast-paced digital world, instant messaging has become an integral part of our lives. WhatsApp is undeniably one of the most popular platforms for connecting with friends, family, and businesses. However, one frustrating aspect of WhatsApp is the need to save a contact’s number before initiating a chat. Enter <strong>Wa Me 91</strong>, an innovative WhatsApp web tool that allows you to chat without saving numbers. In this article, we will explore the features and benefits of Wa Me 91 and how it simplifies communication for millions of WhatsApp users.</p>
+
+    <h2 style="color: #005177;">The Need for a WhatsApp Web Tool</h2>
+    <p>With over two billion active users worldwide, WhatsApp has transformed the way we communicate. However, the traditional process of saving a contact’s number before starting a conversation can be time-consuming and inconvenient. Many users want to send a quick message without cluttering their contact list or worrying about privacy concerns. That’s where <strong>Wa Me 91</strong> comes to the rescue. It offers a hassle-free solution to start chatting instantly, eliminating the need to save numbers.</p>
+
+    <h2 style="color: #005177;">Understanding Wa Me 91</h2>
+    <p><strong>Wa Me 91</strong> is a user-friendly WhatsApp web tool that simplifies the process of initiating chats without saving numbers. The tool provides a seamless experience by breaking down the process into three simple steps: selecting the country code, entering the mobile number, and optionally pre-filling a custom message. Once these details are entered, users can click to chat via WhatsApp or WhatsApp Business, depending on their requirements.</p>
+
+    <h2 style="color: #005177;">Key Features of Wa Me 91</h2>
+    <ul style="list-style-type: disc; margin-left: 40px;">
+        <li><strong>Easy-to-use interface:</strong> Wa Me 91 offers a clean and intuitive interface that requires no technical expertise. Users can quickly navigate through the tool and initiate chats in a matter of seconds.</li>
+        <li><strong>Privacy protection:</strong> One of the significant advantages of using Wa Me 91 is that it maintains the privacy of users. Since numbers are not saved, there is no risk of inadvertently sharing personal information or cluttering up the contact list.</li>
+        <li><strong>Customization options:</strong> With the option to pre-fill a custom message, users can personalize their conversations right from the start. This feature is especially useful for businesses, allowing them to craft tailored messages to engage customers effectively.</li>
+        <li><strong>Compatibility:</strong> Wa Me 91 is compatible with all major web browsers, including Chrome, Firefox, Safari, and Microsoft Edge. It also supports both WhatsApp and WhatsApp Business, providing flexibility for users based on their specific needs.</li>
+        <li><strong>Time-saving convenience:</strong> By eliminating the need to save numbers, Wa Me 91 streamlines the communication process. Users can save time and effort, especially when engaging with new contacts or unfamiliar businesses.</li>
+    </ul>
+
+    <h2 style="color: #005177;">Benefits of Using Wa Me 91</h2>
+    <p>Wa Me 91 offers numerous benefits to individuals and businesses alike. For individuals, it provides a quick and efficient way to connect with friends, colleagues, or acquaintances without the hassle of saving numbers. This can be particularly useful when contacting local services, such as restaurants, salons, or repair technicians.</p>
+    <p>For businesses, Wa Me 91 presents a powerful tool to enhance customer engagement. By eliminating the friction of saving numbers, businesses can increase the likelihood of users initiating conversations. Furthermore, the ability to pre-fill custom messages allows for targeted marketing and personalized interactions, improving customer satisfaction and driving conversions.</p>
+
+    <h2 style="color: #005177;">FAQs about Wa Me 91</h2>
+    <dl style="margin-left: 20px;">
+        <dt><strong>Q1: What is Wa Me 91?</strong></dt>
+        <dd>A1: Wa Me 91 is a WhatsApp web tool that allows you to initiate chats without the need to save the contact’s number in your phone.</dd>
+
+        <dt><strong>Q2: How does Wa Me 91 work?</strong></dt>
+        <dd>A2: Wa Me 91 simplifies the process of starting a conversation on WhatsApp by breaking it down into three simple steps: selecting the country code, entering the mobile number, and optionally pre-filling a custom message. Once these details are entered, users can click to chat via WhatsApp or WhatsApp Business.</dd>
+
+        <dt><strong>Q3: Is Wa Me 91 compatible with all web browsers?</strong></dt>
+        <dd>A3: Yes, Wa Me 91 is compatible with all major web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.</dd>
+
+        <dt><strong>Q4: Does Wa Me 91 support WhatsApp Business?</strong></dt>
+        <dd>A4: Yes, Wa Me 91 supports both WhatsApp and WhatsApp Business, giving users the flexibility to choose the appropriate platform for their communication needs.</dd>
+
+        <dt><strong>Q5: Is it safe to use Wa Me 91?</strong></dt>
+        <dd>A5: Yes, using Wa Me 91 is safe. It does not store or save any contact numbers, ensuring the privacy and security of users’ personal information.</dd>
+
+        <dt><strong>Q6: Can I customize my messages using Wa Me 91?</strong></dt>
+        <dd>A6: Absolutely! Wa Me 91 provides an option to pre-fill a custom message before initiating a chat. This allows users, especially businesses, to personalize their conversations and engage their audience effectively.</dd>
+
+        <dt><strong>Q7: What are the benefits of using Wa Me 91?</strong></dt>
+        <dd>A7: Wa Me 91 offers several benefits, including time-saving convenience, privacy protection, an easy-to-use interface, compatibility with major web browsers, and customization options for personalized interactions.</dd>
+
+        <dt><strong>Q8: Can Wa Me 91 be used for both personal and business purposes?</strong></dt>
+        <dd>A8: Yes, Wa Me 91 caters to both personal and business communication needs. It allows individuals to connect with friends, family, and local services effortlessly, while businesses can utilize it to enhance customer engagement and streamline their marketing efforts.</dd>
+
+        <dt><strong>Q9: Do I need to install any additional software to use Wa Me 91?</strong></dt>
+        <dd>A9: No, Wa Me 91 is a web-based tool that can be accessed directly through your preferred web browser. There is no need to install any additional software or extensions.</dd>
+
+        <dt><strong>Q10: Is Wa Me 91 a free tool?</strong></dt>
+        <dd>A10: Yes, Wa Me 91 is available for free, allowing users to enjoy its benefits without any cost.</dd>
+
+        <dt><strong>Q11: Are there any limitations on the number of messages I can send?</strong></dt>
+        <dd>A11: No, there are no specific limitations on the number of messages you can send using Wa Me 91. However, it is recommended to use the tool responsibly and avoid spamming or sending excessive messages.</dd>
+
+        <dt><strong>Q12: Can I schedule messages using Wa Me 91?</strong></dt>
+        <dd>A12: Currently, Wa Me 91 does not offer a built-in scheduling feature. However, you can use other third-party tools or services to schedule messages and then use Wa Me 91 to initiate the chat.</dd>
+    </dl>
+
+    <h2 style="color: #005177;">Conclusion</h2>
+    <p><strong>Wa Me 91</strong> revolutionizes the way we use WhatsApp by providing a convenient solution to chat without saving numbers. With its user-friendly interface, privacy protection, customization options, compatibility, and time-saving convenience, Wa Me 91 empowers individuals and businesses to communicate effortlessly. Whether you want to connect with friends, reach out to local services, or enhance your business’s customer engagement, Wa Me 91 is the go-to tool for hassle-free WhatsApp conversations. Try it today and experience a new level of efficiency and simplicity in your messaging experience.</p>
+</article>
