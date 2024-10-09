@@ -3,49 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="512x512" href="assets/logo.png">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/favicon.png">
+    <link rel="manifest" href="/pwa-manifest.json">
     
     <title>wa.me/91 - wa me 91</title>
-    <meta name="description" content="Country Code: Afghanistan (+93) Albania (+355) Algeria (+213) American Samoa (+1684) Andorra (+376) Angola (+244) Anguilla (+1264) Antigua &amp; Barbuda"/>
-
+    <meta name="description" content="Wa Me 91 - Initiate WhatsApp chats without saving numbers.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wame91.com/" />
     
+    <!-- Open Graph Metadata -->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="wa.me/91 - wa me 91" />
-    <meta property="og:description" content="Country Code: Afghanistan (+93) Albania (+355) Algeria (+213) American Samoa (+1684) Andorra (+376) Angola (+244) Anguilla (+1264) Antigua &amp; Barbuda" />
+    <meta property="og:description" content="Chat on WhatsApp without saving numbers!" />
     <meta property="og:url" content="https://wame91.com/" />
     <meta property="og:site_name" content="wa me 91" />
     
     <link rel="alternate" type="application/rss+xml" title="wa me 91 &raquo; Feed" href="https://wame91.com/feed/" />
     <link rel="alternate" type="application/rss+xml" title="wa me 91 &raquo; Comments Feed" href="https://wame91.com/comments/feed/" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Wa Me 91</h1>
-    <p>Country Code: <strong>India (+91)</strong></p>
-    
-    <label for="mobile-number">Mobile Number:</label>
-    <input type="text" id="mobile-number" placeholder="Enter mobile number">
-    
-    <label for="message">Message:</label>
-    <input type="text" id="message" value="Hello">
 
-    <button onclick="sendMessage()">Send via WhatsApp</button>
-    <button onclick="sendMessageBusiness()">Send via WhatsApp Business</button>
+    <header class="header">
+        <h1>Wa Me 91</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <script>
-        function sendMessage() {
-            const number = document.getElementById('mobile-number').value;
-            const message = document.getElementById('message').value;
-            window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
-        }
+    <main class="container mt-4">
+        <h2>Country Code:</h2>
+        <p>India (+91)</p>
+        
+        <h2>Mobile Number:</h2>
+        <input type="text" id="mobileNumber" class="form-control" placeholder="Enter mobile number">
+        
+        <h2>Message:</h2>
+        <input type="text" id="message" class="form-control" placeholder="Hello">
 
-        function sendMessageBusiness() {
-            const number = document.getElementById('mobile-number').value;
-            const message = document.getElementById('message').value;
-            window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank');
-        }
-    </script>
+        <button class="btn btn-success mt-3" id="whatsappButton">
+            Send via WhatsApp
+        </button>
+        <button class="btn btn-info mt-3" id="whatsappBusinessButton">
+            Send via WhatsApp Business
+        </button>
+        
+        <section class="mt-5">
+            <h2>Introducing Wa Me 91</h2>
+            <p>In today’s fast-paced digital world, instant messaging has become an integral part of our lives...</p>
+            <!-- Add more content as needed -->
+        </section>
+
+        <section class="mt-5">
+            <h2>FAQs</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is Wa Me 91?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Wa Me 91 is a WhatsApp web tool that allows you to initiate chats without saving the contact’s number in your phone.
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more FAQ cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 wa me 91 • Built with GeneratePress</p>
+        <a href="#">Download Wa Me 91 App (Under 1MB)</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
