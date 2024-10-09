@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="/pwa-manifest.json">
-    <link rel="apple-touch-icon" sizes="512x512" href="https://wame91.com/wp-content/uploads/2023/05/wame91-favicon-min.png">
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="https://wame91.com/wp-content/uploads/2024/01/wame91-192px.png">
-    <link rel="icon" href="https://www.whatsapp.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="512x512" href="/wp-content/uploads/2023/05/wame91-favicon-min.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="/wp-content/uploads/2024/01/wame91-192px.png">
+    <link rel="icon" href="/wp-content/uploads/2023/05/wame91-favicon-min.png" type="image/x-icon">
     
     <title>wa.me/91 - wa me 91</title>
-    <meta name="description" content="Country Code: Afghanistan (+93)Albania (+355)Algeria (+213)American Samoa (+1684)Andorra (+376)Angola (+244)Anguilla (+1264)Antigua &amp; Barbuda"/>
+    <meta name="description" content="Effortlessly connect with WhatsApp contacts without saving numbers. Simplify your messaging experience with Wa Me 91."/>
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
     <link rel="canonical" href="https://wame91.com/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="wa.me/91 - wa me 91" />
-    <meta property="og:description" content="Country Code: Afghanistan (+93)Albania (+355)Algeria (+213)American Samoa (+1684)Andorra (+376)Angola (+244)Anguilla (+1264)Antigua &amp; Barbuda" />
+    <meta property="og:description" content="Effortlessly connect with WhatsApp contacts without saving numbers. Simplify your messaging experience with Wa Me 91." />
     <meta property="og:url" content="https://wame91.com/" />
     <meta property="og:site_name" content="wa me 91" />
     <meta property="og:updated_time" content="2024-09-09T17:07:16+05:30" />
@@ -23,7 +23,7 @@
     <meta property="article:modified_time" content="2024-09-09T17:07:16+05:30" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="wa.me/91 - wa me 91" />
-    <meta name="twitter:description" content="Country Code: Afghanistan (+93)Albania (+355)Algeria (+213)American Samoa (+1684)Andorra (+376)Angola (+244)Anguilla (+1264)Antigua &amp; Barbuda" />
+    <meta name="twitter:description" content="Effortlessly connect with WhatsApp contacts without saving numbers. Simplify your messaging experience with Wa Me 91." />
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -34,16 +34,32 @@
             padding: 0;
         }
         header {
-            background-color: #25D366; /* WhatsApp green */
-            padding: 10px;
+            background-color: #4CAF50; /* Change header color to a different shade */
+            padding: 20px;
             color: white;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            width: 100px; /* Set a width for the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 15px;
+            position: relative;
         }
         .container {
             margin: 20px auto;
@@ -52,204 +68,159 @@
             background: white;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensures full width */
+        }
+        /* WhatsApp Tool Styles */
+        .whatsapp-tool-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .whatsapp-button, .whatsapp-business-button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-button {
+            background-color: #25D366; /* WhatsApp Color */
+            color: white;
+        }
+        .whatsapp-business-button {
+            background-color: #075E54; /* WhatsApp Business Color */
+            color: white;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* WhatsApp hover color */
+        }
+        .whatsapp-business-button:hover {
+            background-color: #054C44; /* WhatsApp Business hover color */
+        }
+        @media (max-width: 480px) {
+            .button-group {
+                flex-direction: column;
+            }
+            .whatsapp-button, .whatsapp-business-button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <a data-testid="whatsapp_www_header_logo_link" href="https://www.whatsapp.com/" class="_9vcv">
+        <img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp Logo">
+    </a>
     <h1>wa.me/91</h1>
     <nav>
-        <a href="#home" style="color:white; margin-right:15px;">Home</a>
-        <a href="#about" style="color:white; margin-right:15px;">About Us</a>
-        <a href="#contact" style="color:white; margin-right:15px;">Contact Us</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
     </nav>
 </header>
 
 <div class="container">
     <h2>Welcome to wa.me/91</h2>
-    <p>Use this tool to easily access WhatsApp messaging services for various countries.</p>
-    
-   <style>
-.whatsapp-tool-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    <p>Wa Me 91 is an innovative web tool designed to simplify your WhatsApp messaging experience. With our service, you can easily send messages to any WhatsApp number without needing to save it in your contacts. This means no more clutter in your contact list and a smoother communication process.</p>
 
-.form-group {
-    margin-bottom: 20px;
-}
+    <p>Whether you're connecting with a new friend, reaching out to a business, or just want to send a quick message, Wa Me 91 makes it effortless. Just enter the country code, mobile number, and your message, and you’re ready to go!</p>
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+    <div class="whatsapp-tool-container">
+        <form id="whatsapp-form">
+            <div class="form-group">
+                <label for="country-code">Country Code:</label>
+                <select id="country-code">
+                    <option value="93">Afghanistan (+93)</option>
+                    <option value="91" selected>India (+91)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile-number">Mobile Number:</label>
+                <input type="tel" id="mobile-number" required placeholder="Enter mobile number">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Type your message here">Hello! , How are you?</textarea>
+            </div>
 
-select, input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
+            <div class="button-group">
+                <button type="button" onclick="sendWhatsApp('regular')" class="whatsapp-button">Send via WhatsApp</button>
+                <button type="button" onclick="sendWhatsApp('business')" class="whatsapp-business-button">Send via WhatsApp Business</button>
+            </div>
+        </form>
+    </div>
 
-textarea {
-    height: 100px;
-}
+    <article style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333;">
+        <h1 style="color: #0073aa; text-align: center;">Introducing Wa Me 91: A Revolutionary WhatsApp Web Tool for Effortless Chatting</h1>
+        <p>In today’s fast-paced digital world, instant messaging has become an integral part of our lives. WhatsApp is undeniably one of the most popular platforms for connecting with friends, family, and businesses. However, one frustrating aspect of WhatsApp is the need to save a contact’s number before initiating a chat. Enter <strong>Wa Me 91</strong>, an innovative WhatsApp web tool that allows you to chat without saving numbers. In this article, we will explore the features and benefits of Wa Me 91 and how it simplifies communication for millions of WhatsApp users.</p>
 
-#country-search {
-    margin-bottom: 10px;
-}
+        <h2 style="color: #005177;">The Need for a WhatsApp Web Tool</h2>
+        <p>With over two billion users globally, WhatsApp has revolutionized how we communicate. Yet, many users find it cumbersome to save contacts just to send a quick message. Whether you’re reaching out to a new business or a friend, the requirement to save a number can be an unnecessary hurdle. Wa Me 91 aims to eliminate this barrier, making chatting more accessible and convenient.</p>
 
-.button-group {
-    display: flex;
-    gap: 10px;
-}
+        <h2 style="color: #005177;">How Wa Me 91 Works</h2>
+        <p>Using Wa Me 91 is incredibly straightforward. Simply enter the desired mobile number and your message, and click the button to send. The tool generates a link that opens a chat in WhatsApp, allowing you to connect without saving the number. This seamless experience saves you time and keeps your contact list uncluttered.</p>
 
-.whatsapp-button, .whatsapp-business-button {
-    flex: 1;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
+        <h2 style="color: #005177;">Key Features of Wa Me 91</h2>
+        <ul>
+            <li><strong>No Contact Clutter:</strong> Message any number without adding it to your contacts.</li>
+            <li><strong>Quick and Easy:</strong> Send messages in seconds with a simple interface.</li>
+            <li><strong>Universal Use:</strong> Works for any country code and number.</li>
+            <li><strong>Mobile-Friendly:</strong> Accessible from any device, making it perfect for on-the-go communication.</li>
+        </ul>
 
-.whatsapp-button {
-    background-color: #25D366; /* WhatsApp Color */
-    color: white;
-}
-
-.whatsapp-business-button {
-    background-color: #075E54; /* WhatsApp Business Color */
-    color: white;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E; /* WhatsApp hover color */
-}
-
-.whatsapp-business-button:hover {
-    background-color: #054C44; /* WhatsApp Business hover color */
-}
-
-@media (max-width: 480px) {
-    .button-group {
-        flex-direction: column;
-    }
-    
-    .whatsapp-button, .whatsapp-business-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-</style>
-
-<div class="whatsapp-tool-container">
-    <form id="whatsapp-form">
-        <div class="form-group">
-            <label for="country-code">Country Code:</label>
-            <select id="country-code">
-                <option value="93">Afghanistan (+93)</option>
-                <option value="91" selected>India (+91)</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="mobile-number">Mobile Number:</label>
-            <input type="tel" id="mobile-number" required placeholder="Enter mobile number">
-        </div>
-        
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" placeholder="Type your message here">Hello! , How are you?</textarea>
-        </div>
-
-        <div class="button-group">
-            <button type="button" onclick="sendWhatsApp('regular')" class="whatsapp-button">Send via WhatsApp</button>
-            <button type="button" onclick="sendWhatsApp('business')" class="whatsapp-business-button">Send via WhatsApp Business</button>
-        </div>
-    </form>
-</div>
-
-<article style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333;">
-    <h1 style="color: #0073aa; text-align: center;">Introducing Wa Me 91: A Revolutionary WhatsApp Web Tool for Effortless Chatting</h1>
-
-    <p>In today’s fast-paced digital world, instant messaging has become an integral part of our lives. WhatsApp is undeniably one of the most popular platforms for connecting with friends, family, and businesses. However, one frustrating aspect of WhatsApp is the need to save a contact’s number before initiating a chat. Enter <strong>Wa Me 91</strong>, an innovative WhatsApp web tool that allows you to chat without saving numbers. In this article, we will explore the features and benefits of Wa Me 91 and how it simplifies communication for millions of WhatsApp users.</p>
-
-    <h2 style="color: #005177;">The Need for a WhatsApp Web Tool</h2>
-    <p>With over two billion active users worldwide, WhatsApp has transformed the way we communicate. However, the traditional process of saving a contact’s number before starting a conversation can be time-consuming and inconvenient. Many users want to send a quick message without cluttering their contact list or worrying about privacy concerns. That’s where <strong>Wa Me 91</strong> comes to the rescue. It offers a hassle-free solution to start chatting instantly, eliminating the need to save numbers.</p>
-
-    <h2 style="color: #005177;">Understanding Wa Me 91</h2>
-    <p><strong>Wa Me 91</strong> is a user-friendly WhatsApp web tool that simplifies the process of initiating chats without saving numbers. The tool provides a seamless experience by breaking down the process into three simple steps: selecting the country code, entering the mobile number, and optionally pre-filling a custom message. Once these details are entered, users can click to chat via WhatsApp or WhatsApp Business, depending on their requirements.</p>
-
-    <h2 style="color: #005177;">Key Features of Wa Me 91</h2>
-    <ul style="list-style-type: disc; margin-left: 40px;">
-        <li><strong>Easy-to-use interface:</strong> Wa Me 91 offers a clean and intuitive interface that requires no technical expertise. Users can quickly navigate through the tool and initiate chats in a matter of seconds.</li>
-        <li><strong>Privacy protection:</strong> One of the significant advantages of using Wa Me 91 is that it maintains the privacy of users. Since numbers are not saved, there is no risk of inadvertently sharing personal information or cluttering up the contact list.</li>
-        <li><strong>Customization options:</strong> With the option to pre-fill a custom message, users can personalize their conversations right from the start. This feature is especially useful for businesses, allowing them to craft tailored messages to engage customers effectively.</li>
-        <li><strong>Compatibility:</strong> Wa Me 91 is compatible with all major web browsers, including Chrome, Firefox, Safari, and Microsoft Edge. It also supports both WhatsApp and WhatsApp Business, providing flexibility for users based on their specific needs.</li>
-        <li><strong>Time-saving convenience:</strong> By eliminating the need to save numbers, Wa Me 91 streamlines the communication process. Users can save time and effort, especially when engaging with new contacts or unfamiliar businesses.</li>
-    </ul>
-
-    <h2 style="color: #005177;">Benefits of Using Wa Me 91</h2>
-    <p>Wa Me 91 offers numerous benefits to individuals and businesses alike. For individuals, it provides a quick and efficient way to connect with friends, colleagues, or acquaintances without the hassle of saving numbers. This can be particularly useful when contacting local services, such as restaurants, salons, or repair technicians.</p>
-    <p>For businesses, Wa Me 91 presents a powerful tool to enhance customer engagement. By eliminating the friction of saving numbers, businesses can increase the likelihood of users initiating conversations. Furthermore, the ability to pre-fill custom messages allows for targeted marketing and personalized interactions, improving customer satisfaction and driving conversions.</p>
-
-    <h2 style="color: #005177;">FAQs about Wa Me 91</h2>
-    <dl style="margin-left: 20px;">
-        <dt><strong>Q1: What is Wa Me 91?</strong></dt>
-        <dd>A1: Wa Me 91 is a WhatsApp web tool that allows you to initiate chats without the need to save the contact’s number in your phone.</dd>
-
-        <dt><strong>Q2: How does Wa Me 91 work?</strong></dt>
-        <dd>A2: Wa Me 91 simplifies the process of starting a conversation on WhatsApp by breaking it down into three simple steps: selecting the country code, entering the mobile number, and optionally pre-filling a custom message. Once these details are entered, users can click to chat via WhatsApp or WhatsApp Business.</dd>
-
-        <dt><strong>Q3: Is Wa Me 91 compatible with all web browsers?</strong></dt>
-        <dd>A3: Yes, Wa Me 91 is compatible with all major web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.</dd>
-
-        <dt><strong>Q4: Does Wa Me 91 support WhatsApp Business?</strong></dt>
-        <dd>A4: Yes, Wa Me 91 supports both WhatsApp and WhatsApp Business, giving users the flexibility to choose the appropriate platform for their communication needs.</dd>
-
-        <dt><strong>Q5: Is it safe to use Wa Me 91?</strong></dt>
-        <dd>A5: Yes, using Wa Me 91 is safe. It does not store or save any contact numbers, ensuring the privacy and security of users’ personal information.</dd>
-
-        <dt><strong>Q6: Can I customize my messages using Wa Me 91?</strong></dt>
-        <dd>A6: Absolutely! Wa Me 91 provides an option to pre-fill a custom message before initiating a chat. This allows users to personalize their conversations right from the start.</dd>
-    </dl>
-
-    <h2 style="color: #005177;">Conclusion</h2>
-    <p>In conclusion, Wa Me 91 is a groundbreaking WhatsApp web tool that revolutionizes the way we communicate. By allowing users to initiate chats without saving numbers, it offers a seamless and convenient experience for individuals and businesses alike. With its user-friendly interface, privacy protection, customization options, and time-saving convenience, Wa Me 91 is set to become an essential tool for anyone looking to enhance their communication experience on WhatsApp. Try it today and experience the future of instant messaging!</p>
-</article>
-
-<script>
-function sendWhatsApp(type) {
-    var countryCode = document.getElementById("country-code").value;
-    var mobileNumber = document.getElementById("mobile-number").value;
-    var message = encodeURIComponent(document.getElementById("message").value);
-    var url = "https://wa.me/";
-
-    if (type === 'regular') {
-        url += countryCode + mobileNumber + "?text=" + message;
-    } else if (type === 'business') {
-        url += "business/" + countryCode + mobileNumber + "?text=" + message;
-    }
-
-    window.open(url, '_blank');
-}
-</script>
-
+        <h2 style="color: #005177;">Conclusion</h2>
+        <p>Wa Me 91 is the perfect tool for anyone who frequently uses WhatsApp. By removing the need to save numbers, it streamlines the messaging process and enhances user convenience. Whether you’re chatting with friends, family, or businesses, Wa Me 91 allows you to communicate with ease. Visit us today and experience the future of messaging!</p>
+    </article>
 </div>
 
 <footer>
-    <p>Tool by EZI Networks</p>
+    <p>&copy; 2024 Wa Me 91. All rights reserved.</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function sendWhatsApp(type) {
+        const countryCode = document.getElementById('country-code').value;
+        const mobileNumber = document.getElementById('mobile-number').value;
+        const message = document.getElementById('message').value;
+        const url = `https://wa.me/${countryCode}${mobileNumber}?text=${encodeURIComponent(message)}`;
+        
+        if (type === 'business') {
+            window.open(url, '_blank');
+        } else {
+            window.open(url, '_blank');
+        }
+    }
+</script>
+
 </body>
 </html>
